@@ -3,6 +3,11 @@
 *1. 枢纽元选取策略
 *2. 分割策略（细节的实现依赖于枢纽元的选取策略）
 *3. 小数组
+ 
+ 易忘处：
+ 1. 判断小数组的长度应当为 rpos-lpos+1,而不是array.length
+ 2. 对于小数组，执行InsertionSort后return
+ 3. 分割完成后，需要将pivot与array[i]交换
 */
 
 public class QuickSortTest{
