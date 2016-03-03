@@ -19,15 +19,14 @@ public class QuickSortTest{
 
     if(to - from + 1 <= CUTOFF){
       insertionSort(array, from, to);
-      return ;  //DO NOT FORGET return!
+      return ;               //DO NOT FORGET return!
     }
 
     int pivot = getPivot(array, from, to);
     int idx = partition(array, from, to, pivot);
 
 
-    swap(array, idx, to-1);  //这一句不要丢了！！每次分割完毕，
-                             //枢纽元已经确保在正确的位置
+    swap(array, idx, to-1);
 
     QuickSort(array, from, idx - 1);
     QuickSort(array, idx + 1, to);
@@ -75,6 +74,10 @@ public class QuickSortTest{
       else break;
     }
 
+      swap(array, i, to-1);//这一句不要丢了！！每次分割完毕，
+                            //枢纽元已经确保在正确的位置
+      
+      
     /*
     若上面的i，j初始化及循环换成如下语句，则A[i]==A[j]==pivot时会产生死循环
 
