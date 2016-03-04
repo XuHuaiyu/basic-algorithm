@@ -2,6 +2,16 @@
 优先队列核心操作
 1. 插入(核心代码为insert)
 2. 删除(核心代码为percolateDown)
+
+注意点：
+1. 记得判空与判满
+2. insert方法循环条件为值的大小，因为父节点只有一个
+3. insert方法比较的是elem[i/2]与v的大小，而不是elem[i/2]与elem[i]的大小
+4. percolateDown方法循环条件为下标，因为子节点有两个，下滤一层后还需判断下子节点之间的大小
+5. percolateDown方法比较子节点大小时候，不要忘了加上右节点存在性的判断(2*i<size)
+
+插入，删除操作O(log n)
+建堆操作O(n)
 */
 
 public class MinPQ{
