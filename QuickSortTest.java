@@ -3,7 +3,7 @@
 *1. 枢纽元选取策略
 *2. 分割策略（细节的实现依赖于枢纽元的选取策略）
 *3. 小数组
- 
+
  易忘处：
  1. 判断小数组的长度应当为 rpos-lpos+1,而不是array.length
  2. 对于小数组，执行InsertionSort后return
@@ -79,10 +79,10 @@ public class QuickSortTest{
       else break;
     }
 
-      swap(array, i, to-1);//这一句不要丢了！！每次分割完毕，
+    swap(array, i, to-1);//这一句不要丢了！！每次分割完毕，
                             //枢纽元已经确保在正确的位置
-      
-      
+
+
     /*
     若上面的i，j初始化及循环换成如下语句，则A[i]==A[j]==pivot时会产生死循环
 
