@@ -55,7 +55,7 @@ public class MinPQ{
       if(child < size &&  less(child+1, child))
         child = child+1;
       if(less(child, i)) exch(child, i);
-      else break;
+      else break;//勿忘 break；
     }
   }
 
